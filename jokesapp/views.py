@@ -12,8 +12,9 @@ import random
 class jokesList(APIView):
     def get(self, request):
 
-        jokes1=jokes.objects.all()
-        serializer=jokesSerializer(jokes1, many=True)
+        jokes1=list(jokes.objects.all())
+        random_items=random.sample(jokes1, 1)
+        serializer=jokesSerializer(random_items,many=True)
         return Response(serializer.data)
 
     def post(self):
