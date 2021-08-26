@@ -3,5 +3,5 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from . import views
 
 urlpatterns=[
-    path('jokes/', views.jokesList.as_view()),
+    path('', views.jokesList.as_view()),
 ]

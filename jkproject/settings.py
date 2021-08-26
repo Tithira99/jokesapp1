@@ -23,13 +23,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 with open(os.path.join(BASE_DIR,'jkproject/SK.txt')) as f:
- SECRET_KEY = f.read().strip()
+SECRET_KEY = f.read().strip()
 #SECRET_KEY = 'django-insecure-okk6fj8yr4mg0dkb2@213(m$tzikykfjreh_-#dj(ow&a)yf@#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://jokeslist2.herokuapp.com']
+#ALLOWED_HOSTS = ['https://jokeslist2.herokuapp.com', 'http://127.0.0.1:8000/']
+ALLOWED_HOSTS = ["*"]
+
 
 
 # Application definition
